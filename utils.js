@@ -37,3 +37,19 @@ function polysIntersect(poly1, poly2){
     }
     return false;
 }
+
+function getRGBA_gc(value){
+    const r = value >> 16;
+    const g = (value >> 8) & 0xFF;
+    const b = value & 0xFF;
+    return `rgba(${r}, ${g}, ${b}, 1)`;
+}
+
+function getRGBA(value){
+    const value = weights[i][j];
+    const alpha = Math.abs(value);
+    const R = value < 0 ? 0 : 255;
+    const G = R;
+    const B = value > 0 ? 0 : 255;
+    return "rgba(" + R + "," + G + "," + B + "," + alpha + ")";
+}
